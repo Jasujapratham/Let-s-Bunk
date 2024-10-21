@@ -18,7 +18,7 @@ form.addEventListener('submit', function (e) {
         const currentPercentage = ((attended / total) * 100).toFixed(2);
 
         if (currentPercentage > desiredPercentage) {
-            const classesBunk = Math.round(Math.ceil((100*attended)- (desiredPercentage*total)) / (desiredPercentage));
+            const classesBunk = Math.ceil(((100*attended)- (desiredPercentage*total)) / (desiredPercentage));
             results.innerHTML = `Your current attendance is ${currentPercentage} and You can bunk ${classesBunk} number of classes`;
         }
         else if(currentPercentage == desiredPercentage){
